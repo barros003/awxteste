@@ -1,4 +1,7 @@
-- name: install nginx
-  service:
-      name: nginx
-      state: started
+- name: start
+  hosts: all
+  tasks:
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
