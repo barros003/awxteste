@@ -1,0 +1,9 @@
+- hosts: localhost
+  roles:
+    - role: redhat.satellite.content_view_version_cleanup
+      vars:
+        satellite_server_url: https://foremankatello.pdc.com.br
+        satellite_username: "{{ user }}"
+        satellite_password: "{{ passw }}"
+        satellite_organization: "Testepdc"
+        satellite_content_view_version_cleanup_keep: 2
