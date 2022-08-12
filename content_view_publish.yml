@@ -1,0 +1,71 @@
+---
+- hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: "Publicando e promovendo OL7"
+    theforeman.foreman.content_view_version:
+      username: "{{ user }}"
+      password: "{{ passw }}"
+      server_url: "https://192.168.111.128"
+      content_view: "OL7"
+      organization: "PDC"
+      description: "{{ descricao }}"
+      lifecycle_environments:
+        - Library
+        - DEV
+        - HOM
+        - PROD
+    tags:
+    - OL7
+    - ALL
+
+  - name: "Publicando e promovendo OL8"
+    theforeman.foreman.content_view_version:
+      username: "{{ user }}"
+      password: "{{ passw }}"
+      server_url: "https://192.168.111.128"
+      content_view: "OL8"
+      organization: "PDC"
+      description: "{{ descricao }}"
+      lifecycle_environments:
+        - Library
+        - DEV
+        - HOM
+        - PROD
+    tags:
+    - OL8
+    - ALL
+
+  - name: "Publicando e promovendo OL9"
+    theforeman.foreman.content_view_version:
+      username: "{{ user }}"
+      password: "{{ passw }}"
+      server_url: "https://192.168.111.128"
+      content_view: "OL9"
+      organization: "PDC"
+      description: "{{ descricao }}"
+      lifecycle_environments:
+        - Library
+        - DEV
+        - HOM
+        - PROD
+    tags:
+    - OL9
+    - ALL
+
+  - name: "Publicando e promovendo Centos7"
+    theforeman.foreman.content_view_version:
+      username: "{{ user }}"
+      password: "{{ passw }}"
+      server_url: "https://192.168.111.128"
+      content_view: "Centos7"
+      organization: "PDC"
+      description: "{{ descricao }}"
+      lifecycle_environments:
+        - Library
+        - DEV
+        - HOM
+        - PROD
+    tags:
+    - Centos7
+    - ALL
