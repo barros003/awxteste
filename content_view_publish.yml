@@ -10,6 +10,7 @@
       content_view: "OL7"
       organization: "PDC"
       description: "{{ descricao }}"
+      validate_certs: no
       lifecycle_environments:
         - Library
         - DEV
@@ -27,6 +28,7 @@
       content_view: "OL8"
       organization: "PDC"
       description: "{{ descricao }}"
+      validate_certs: no
       lifecycle_environments:
         - Library
         - DEV
@@ -44,6 +46,7 @@
       content_view: "OL9"
       organization: "PDC"
       description: "{{ descricao }}"
+      validate_certs: no
       lifecycle_environments:
         - Library
         - DEV
@@ -61,6 +64,7 @@
       content_view: "Centos7"
       organization: "PDC"
       description: "{{ descricao }}"
+      validate_certs: no
       lifecycle_environments:
         - Library
         - DEV
